@@ -5,10 +5,6 @@ import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 
 const external = [
-  // 'antd',
-  // 'lodash',
-  // 'uuid',
-  // 'react-image',
   '@react-pdf/renderer',
   'react',
   'react-dom',
@@ -32,7 +28,10 @@ export default {
     babel({
       babelrc: false,
       exclude: 'node_modules/**',
-      presets: ['@babel/preset-env', '@babel/preset-react'],
+      presets: [
+        '@babel/preset-env',
+        '@babel/preset-react' 
+      ],
       plugins: [],
     }),
     // Allow bundling cjs modules. Rollup doesn't understand cjs
